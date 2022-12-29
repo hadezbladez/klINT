@@ -1,0 +1,35 @@
+////---- code word
+brave web assembly
+web assembly
+
+management information system MIS
+web assembly WA
+javascript benchmark low level
+
+////---- js and web
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP
+
+js backend-webdev roadmap
+1. Internet basics (HTTP Etc)
+2. HTML/CSS javascript
+3. APIs
+4. Node
+5. Express Git
+6. Database (SQL/NoSQL/Graph)
+7. Web security
+8. Caching
+9. Hosting (Cloud)
+10. testing
+11. Containerization (Docker)
+
+//eval func
+https://www.w3schools.com/jsref/jsref_eval.asp
+https://stackoverflow.com/questions/1843343/json-parse-vs-eval
+https://www.youtube.com/c/NDCConferences/videos
+
+////----why everything needs to be online?
+//pdf func
+https://svelte.dev/
+https://github.com/ShizukuIchi/pdf-editor
+https://github.com/topics/pdf-editor
+

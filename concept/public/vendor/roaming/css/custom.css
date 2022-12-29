@@ -1,0 +1,157 @@
+#sidebar{
+    min-height: calc(100vh - 125px);
+}
+.modal-xlg {
+    max-width: 1000px;
+}
+
+.card.card-comment,.card.card-preview{
+    height: calc(100vh - 194px);
+    margin-bottom: 0px !important;
+}
+.chat-comment,.body-preview{
+    overflow-y: scroll;
+    height: calc(100% - 48px);
+}
+.o-progress{
+    cursor: pointer;
+}
+
+div.dataTables_wrapper div.text-left>div.dataTables_filter {
+    text-align: left !important;
+}
+
+.segaris{
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* distance between stacked modals*/
+/* The first modal translateZ value*/
+.modal.show {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  -o-perspective: 2000px;
+  perspective: 2000px;
+}
+.modal.show .modal-dialog.maside {
+  -webkit-transform: -340px;
+  -moz-transform: -340px;
+  -ms-transform: -340px;
+  -o-transform: -340px;
+  transform: -340px;
+  -webkit-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+  -ms-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+  -o-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+  transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card{
+    margin-bottom: 10px ;
+}
+
+.card-body-c{
+    height: 75px;
+    padding: 10px;
+}
+
+
+.btn-link:hover {
+    text-decoration: none;
+    
+}
+
+.btn-link:focus, .btn-link.focus {
+    text-decoration: none;
+}
+
+.btn-link[aria-expanded="false"]::before, 
+.btn-link[aria-expanded="true"]::before {
+	content: '\f054';
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	font-size: 0.6em;
+	font-family: fontawesome;
+}
+.btn-link[aria-expanded="true"]::before {
+	content: '\f107';
+	font-size: 1em;
+	top: 10px;
+}
+
+
+  /* radio button */
+  .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #b8bcc2;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+  

@@ -1,0 +1,35 @@
+
+
+////----openssl
+//erroring
+need to created on WSL-ubuntu
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
+passphrase = Hansen94
+
+////////level1
+https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/
+Error ?1 Subject Alternative Name missing @brave
+?try1
+https://stackoverflow.com/questions/43665243/invalid-self-signed-ssl-cert-subject-alternative-name-missing
+?try2
+https://alexanderzeitler.com/articles/Fixing-Chrome-missing_subjectAltName-selfsigned-cert-openssl/
+
+//not using it
+Error ? genrsa cant open "path/this/rootCA.key" for writing, No such file
+https://stackoverflow.com/questions/49649673/openssl-genrsa-doesnt-work-when-i-use-aes#54415031
+
+////////error when do something
+////weird error openssl while running
+https://github.com/npm/npm/issues/17261
+it might be because you close WSL
+
+////openssl hangs when created?
+git bash generate openssl key hangs
+https://stackoverflow.com/questions/34156938/openssl-hangs-during-pkcs12-export-with-loading-screen-into-random-state
+https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
+https://rietta.com/blog/openssl-generating-rsa-key-from-command/
+
+////error when creating cert
+https://knowledge.broadcom.com/external/article/26815/what-does-error0d07a097-mean-issued-when.html
+
+

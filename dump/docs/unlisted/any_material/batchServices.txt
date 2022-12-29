@@ -1,0 +1,17 @@
+////----batch services windows 10
+TARGET >> making a batch file services run
+1. need to learn about windows cmd administration and batch
+using them must have use run as administrator
+https://stackoverflow.com/questions/7690994/running-a-command-as-administrator-using-powershell
+https://stackoverflow.com/questions/353161/how-to-test-whether-a-service-is-running-from-the-command-line
+https://stackoverflow.com/questions/415409/run-batch-file-as-a-windows-service
+
+
+sc.exe query "postgresql-x64-14" | findstr RUNNING
+sc.exe query "postgresql-x64-14" | findstr STOPPED
+
+net stop "postgresql-x64-14"
+net start "postgresql-x64-14"
+
+//goog search windows batch tutorial
+windows 10 batch tutorial

@@ -1,0 +1,41 @@
+////---- tree content of labyrinth
+1. main code = package.json && www
+    package.json there might some configuration that can be used by
+        - running style. testing >> add jest; nodemon >> to development; npm run test > to test path or logic;
+        - installing plugin
+        - changing some configuration and environments
+    the first content on www to develop some already installed content package.json
+2. labyrinth content of something
+    /app                    >> core content to use. GSDAM, WebRoute and small utilities
+    /concept                >> This is web-app content to make in here. It uses EJS @ https://www.npmjs.com/package/ejs
+        /concept/models     >> back-end content
+        /concept/views      >> front-end content. 
+            cc-page     = content many things for core page app and their testing content. maybe its just an4 learning purpose
+            error       = content for the dead and the lost souls
+            layout-?    = because we are using ejs. we will combine layout from express-WebRoute.js and ejs too
+                        (layout-core, layout-part)
+            page-?      = should be used if you are ready 4 front-end development purpose. 4 now we just hide it
+                        (page-core, page-part)
+        /concept/public     >> controller for front-end to get back-end side with a securities
+    /security               >> this is the place to use security content. first is certificate ssl
+
+
+////---- content that can be customized
+- www
+    need to personalize it using >> vvart.changeableContent
+        check and test how to use it? (how to sue it? >.<)
+- GSDAM
+    database choice : postgreSQL or MySQL(done)
+    update-ing idea
+        ____func{//this place will be have so many utilities probably from other files too..
+            
+        }
+    do we need to check some requirements?
+- WebRoute
+    content.routingIdea1{
+        learn about routing
+        https://expressjs.com/en/guide/routing.html
+
+        304 issues?
+        https://airbrake.io/blog/http-errors/304-not-modified
+    }

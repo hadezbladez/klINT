@@ -1,0 +1,30 @@
+<!-- header -->
+<div class="app-header1 header py-1 d-flex"> <div class="container-fluid d-flex">
+    <a class="header-brand d-flex h-100" href="#">
+        <!-- alt="Plight logo" -->
+        <img src="/vendor/roaming/img/icon_logo.png" class="header-brand-img my-auto" alt="LOGO DEAD">
+        <span class="text-light text-left my-auto ml-2"><h4 class="m-0">Roaming</h4> </span>
+    </a>
+    <div class="menu-toggle-button"><a class="nav-link wave-effect" href="#" id="sidebarCollapse">
+        <span class="fa fa-bars"></span>
+    </a></div>
+    <div class="d-flex order-lg-2 ml-auto">
+        <div class="dropdown mt-1">
+            <a href="#" class="nav-link pr-0 leading-none h-100" data-toggle="dropdown">
+                <span class="text-light text-left my-auto">
+                    <h5 class="m-0" id="namaUser">{{ Auth::user()->name }}</h5>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                <a href="logout" class="dropdown-item" onclick="event.preventDefault();" id="logout">
+                    <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                </a>
+            </div>
+        </div>
+        <div class="dropdown d-none d-md-flex mt-1" ><a  class="nav-link icon full-screen-link">
+            <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+        </a></div>
+    </div>
+    
+</div> </div>
+<!-- /header -->

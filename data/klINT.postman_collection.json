@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "dfc86c02-da06-45e2-b2b5-42a2c7c40938",
+		"name": "klINT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8989/kl-insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "s",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "asdasd",
+							"type": "text"
+						},
+						{
+							"key": "hakakses",
+							"value": "sadas",
+							"type": "text"
+						},
+						{
+							"key": "kdklinik",
+							"value": "dasd",
+							"type": "text"
+						},
+						{
+							"key": "kdcabang",
+							"value": "asdas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8989/kl-insert",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"kl-insert"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8989/kl-delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "s",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "asdasd",
+							"type": "text"
+						},
+						{
+							"key": "hakakses",
+							"value": "sadas",
+							"type": "text"
+						},
+						{
+							"key": "kdklinik",
+							"value": "dasd",
+							"type": "text"
+						},
+						{
+							"key": "kdcabang",
+							"value": "asdas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8989/kl-delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"kl-delete"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8989/kl-update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "s",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "asdasd",
+							"type": "text"
+						},
+						{
+							"key": "hakakses",
+							"value": "sadas",
+							"type": "text"
+						},
+						{
+							"key": "kdklinik",
+							"value": "dasd",
+							"type": "text"
+						},
+						{
+							"key": "kdcabang",
+							"value": "asdas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8989/kl-update",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"kl-update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8989/kl-read",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "s",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "asd",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nama",
+							"value": "asdasd",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "hakakses",
+							"value": "sadas",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kdklinik",
+							"value": "dasd",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kdcabang",
+							"value": "asdas",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8989/kl-read",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"kl-read"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

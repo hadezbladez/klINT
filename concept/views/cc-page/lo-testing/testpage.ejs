@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<h1>Test EJS page</h1> 
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+<script>
+    console.log("test script success")
+</script>
+
+<% if(typeof layout === 'undefined' || typeof layout === 'string'){ %>
+    <%- contentFor('def_body')%>
+    <h2>other EJS layout test success</h2> 
+<% } else if(typeof layout === 'boolean' && layout == false){%>
+    <h2>not using layout</h2>
+<%}%>
+

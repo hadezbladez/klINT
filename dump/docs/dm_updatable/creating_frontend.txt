@@ -1,0 +1,59 @@
+
+
+////----step by steps
+theres many thing we should need to check on
+1. check setup that is for routes
+>> GSDAM
+    it always the central for all thing like doing require() for content | its for not making mess of a thing
+>> www
+    you might be need to setup www for more utilities to use like
+    file transfering, logging, environment-test, configuring front-end style, Etc
+>> WebRoute.js
+    then you put some new utilities in here. 
+    backend content lock mechanism
+    
+2. Check and setup some routes
+>> check up front-end web pages design like
+    some of the style might be different like
+    partial and using layouts
+
+    
+
+>> setup somes CRUD style (post, get, put, delete) / http methods to fix APIs
+    fixing routing page using next to check the cookies, session and any other useful identification
+    file transfering like download and upload things using [multer] npm-plugin
+    checking database content
+
+3. customizing about concept folder
+this is the content that you can set up for routing on backend or frontend doesnt matter
+some setup might be different if some content use client-server services
+>> views
+    using express-ejs-layout so there r 4 keypoint : 
+        - layout-core, layout-partial, page-core, page-partial
+        - other stuff(left-over stuff) = default-error, lo-learn, lo-other
+>> public
+    its content for static things that you found on internet or you create your own logics
+    there r 3 keypoint : core (page script), self (customized content(script, style, file, etc) ), vendor (stealin content from net)
+>> models
+    its 4 backend connection with database
+
+
+////----additional infos
+//idea of layouting
+there will be multiple layout that just different about their style, script, layouts || its not exactly like that (thank god!)
+layout >> we can include the fuck we want
+partials >> theres three different parts that we will have it
+    body, style, script
+
+its only their parts are differents
+
+
+
+////----error or faulty content
+1. weird first activatation apps
+weird startup? cache stucking? etag error?
+something kinda start error-bug layouting? we need to try again for next time
+https://kinsta.com/knowledgebase/http-304/
+https://stackoverflow.com/questions/18811286/nodejs-express-cache-and-304-status-code
+
+sometimes html page 304 error not modified

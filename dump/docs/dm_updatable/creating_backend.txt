@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+
+////---- working with data on database workbench
+All Purpose(Informix) >> DBeaver
+mysql >> mysql workbench
+postgreSQL >> pgAdmin
+
+
+
+////---- establishing database connection
+////postgreSQL confusion && learning
+1. how to activate the server
+    - we need to start them from services
+    - look 4 "postgresql-x64-14"
+    - then you can start it
+    - without it database on pgadmin 4 it wont work
+2. about more on CMD psql connect
+    psql -h localhost -p 9798 -U postgres
+    psql -h localhost -p 9798 -U appl_data -d Tester
+    psql -h localhost -p 9798 -U appl_user -d acdb
+
+//cheat sheet of cmd line
+https://tomcam.github.io/postgres/
+
+3. current username and password for locals
+id = appl_data
+pw = appl123
+
+4. learning postgresql
+we can import and export content
+we can make user and grant a user for that database
+
+
+////mysql confusion
+1. you need to use xampp to work with
+    without it we dont know what database to work with
+2. local dont use username and password
+

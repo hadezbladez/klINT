@@ -1,0 +1,22 @@
+////----using heroku to deploy
+we cant use database that is free? we even need a credit card?
+we must use it on git bash
+postgresql downloaded
+https://dashboard.heroku.com/apps/betd1-appl/resources
+
+////current web
+https://betd1-appl.herokuapp.com/
+use this page to deploy
+    https://dashboard.heroku.com/apps/betd1-appl/deploy/heroku-git
+to shutdown ||      
+    https://stackoverflow.com/questions/14784734/how-do-i-shutdown-my-heroku-app
+    heroku ps:scale web=0
+to turn on
+    heroku ps:scale web=1
+
+////password reset? some schmucks reseting my password?
+https://stackoverflow.com/questions/8155591/how-to-change-heroku-postgresql-db-password
+
+
+
+

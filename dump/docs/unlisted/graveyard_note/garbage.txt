@@ -1,0 +1,17 @@
+////---- core development
+what things we do need for development. current i know
+    nodejs
+    Visual Studio Code with plugin
+        Material Icon Theme
+    javascript - es5
+        concept using : MVC pattern
+    code design : 
+        - now all things area centralized on global.GSDAM
+        - folder has been organized nicely
+        - refactoring using app or unting? using search is all we can do now
+    running factor
+
+
+
+
+////----security development

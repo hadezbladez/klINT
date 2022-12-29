@@ -1,0 +1,18 @@
+
+
+////---- codedump
+@content.routingIdea1 : function(express, useModel){
+    //start-webpagelayout
+    //blablabla
+    //blablabla
+    //end-webpagelayout
+
+    let ModelsTest = vvart.routeContext.usingModelList("Resp_test")
+    this.router
+    .post("/testerPost", ModelsTest.Resp_test.data)
+
+    //continue blablabla
+
+
+}
+

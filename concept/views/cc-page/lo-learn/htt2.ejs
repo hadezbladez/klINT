@@ -1,0 +1,18 @@
+
+<!-- 
+    inject loop value
+
+ -->
+
+test people variables
+
+<ul>
+<% for(var person of people){ %>
+    <li>
+        <% if(person.name === 'dave'){ %>
+            hello
+        <% } %>
+        <%= person.name %>
+    </li>
+<% } %>
+</ul>

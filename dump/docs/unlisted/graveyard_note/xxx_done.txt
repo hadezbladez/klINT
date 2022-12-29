@@ -1,0 +1,52 @@
+
+
+
+
+////----done?
+
+
+
+
+    //ADC_custom.txt- www
+    1. where we need to personalize it? (done)
+        sorted out. now we just only see it on the changeableContent
+        if there anything goes wrong we just check the www
+    2. changeableContent how to use
+        basically change the way how the www content are perceived for
+
+
+
+
+    //fused and polymerization
+    we need to combine www And GSDAM >> theres no good reason to combine it
+        ____wordCode    >> must be transfer to >> www?
+        ____func        >> what about this guys?
+    www >> needs changeablelist of code
+
+    utility && components must become one
+    utility is still a mess
+
+    -- roaming? they already on here but, they really do need many clean up
+        D:\zland_leftOut\leftOver_njs_workProject\roaming
+        D:\zland_wkspc\zzzz_deletedLater\roaming
+    -- copy it one by one && need to document about layout creation (dont know kinda a bit lazy. like we are repeat and doing nothing)
+        C:\Users\Hsn_Ldns\Downloads\installer\code\javascript plugin\UI Design Kit by pixelcave
+        C:\Users\Hsn_Ldns\Downloads\installer\code\javascript plugin
+
+
+
+
+    //do the website design
+    - need to be a bit beautify them and steal web design from someones.
+    - spruko dead-site
+    - already download something free need to check it out. 
+    - old one needs to be redesigned?
+    add more things to it. its not the way to do it.
+
+
+
+
+    //security learning? (done)
+
+
+    

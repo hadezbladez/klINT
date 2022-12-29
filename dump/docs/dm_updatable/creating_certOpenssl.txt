@@ -1,0 +1,30 @@
+
+
+////----openssl about MITM attack
+man in the middle attack example
+https://www.youtube.com/watch?v=GkexkyUbUd4
+
+////learning openssl 4 stop MITM attack
+//generate key first
+- you need to use WSL-ubuntu >> so here it is
+    cd /mnt/d/zland_wkspc/web_all_ws1/ex2njs_apiserver/
+- if it is on git-bash it will hangs when we use openssl
+    passphrase = Hansen94
+//guide on first context
+for now follow these guide. this is working and doesnt need an passphrase to do
+    https://stackoverflow.com/questions/21397809/create-a-trusted-self-signed-ssl-cert-for-localhost-for-use-with-express-node
+    - wsl-ubuntu
+    cd security/ctf1/
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout cert.key -out cert.pem -config req.cnf -sha256
+yes this path is you need to do it by yourself
+    by inserting your certificate to the trusted content place
+    not from the official trusted content
+
+    //copying certificate
+    right-click >> inspect >> 
+    security tab >> View Certificate 
+    Details tab >> copy to file...
+    just go next all until finish
+    Manage certificates on browser
+    restart the browser
+

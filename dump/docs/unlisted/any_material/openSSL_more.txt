@@ -1,0 +1,19 @@
+
+////article and goog search
+https://medium.com/@rajapradhan08/best-practices-for-securing-node-js-web-applications-2e54cfefdc05
+https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-x509-self-sign
+https://www.youtube.com/watch?v=DsJMDLFw1Ys
+
+https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/
+https://stackoverflow.com/questions/21397809/create-a-trusted-self-signed-ssl-cert-for-localhost-for-use-with-express-node
+
+//its not trusted if you make it by yourself
+https://windowsreport.com/install-windows-10-root-certificates/
+https://docs.microsoft.com/en-us/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store
+
+//openssl weird error while running node
+weird terminal >> between powershell in vscode and powershell in windows are kinda weirdly different
+https://github.com/npm/npm/issues/17261
+//openssl conf environment
+variable name >> OPENSSL_CONF 
+variable value >> D:\hardBase__software\All_postgreSQL\psqlODBC\etc\openssl.cnf

@@ -1,0 +1,32 @@
+
+////---- project review, summary and means
+this project has multi meaning :
+    - it can be updateable and has more variation for it
+    - this is the start of making 
+        Just only API content
+        with any of front-end :
+            - EJS
+            - combination with typescript client-framework likeness(React, vue, angular)
+        more functional utilities for server to do something more like computational work
+        a skeletal project for any kind of a project that i use for work or etc
+
+////---- building, developing and customizing of this app...
+anything that i can customize and developing
+1. yeah we have some word shortening that might can confusing so i need to keep track something but, it easy to look at
+
+////---- any word stands for || Word Shortening
+GSDAM = Global Static Data Application Management || Global Static Data Application Memory
+FUI = Future Update IDEA
+MVC = Model View Controller (you get it ¯\_(ツ)_/¯)
+CRUD - API technique
+    C - Create - POST
+    R - Read - GET
+    U - Update - PUT
+    D - Delete - DELETE
+
+    R - Read - GET
+    C - Create - POST
+    U - Update - PUT
+    D - Delete - DELETE
+
+TPP = Third-Party Plugin

@@ -1,0 +1,43 @@
+
+APPLICATION DEVELOPMENT CONCEPT
+
+////---- customizing main-plan and handling anything
+1. name consent. naome
+    newproject_exmp3 >> ex3njs_dynamicserver
+2. content application mean
+    - incomplete web development 
+    - incomplete server-side connection 
+    - only for common gateway interface (REST API)
+    - security development :
+        + no-injection : sql-injection
+        + CORS test
+        + openSSL - MITM
+3. material used on this application
+    material concept used
+        - programming language nodejs (javascript - es5)
+        - database : MySQL, PostgreSQL
+        - plugin : express.js
+
+
+////---- application implementation
+1. cores
+    REST API
+    MVC pattern
+2. functional utilities addition
+    using .env file to make it easy to setup environment
+    GSDAM = centralized global.GSDAM
+    unit testing >> REPL, test.js and Jest
+    HTTPS openSSL certificate test
+    2 database connector : MySQL, PostgreSQL
+3. external tool support
+    terminal : WSL-ubuntu, Git bash
+    Visual Studio Code with plugin
+        Material Icon Theme
+    postman : requesting API testing
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+
+FUTURE UPDATE IDEA
+
+////---- contente
+we can reorganize more about unlisted content but for now, we dont have anything else of particular things
+
+//// create your own customized front-dashboard?
+example >>
+C:\Users\Hsn_Ldns\Downloads\installer\code\javascript plugin\UI Design Kit by pixelcave
+we need to do some cleanup and note their content to upgrade
+//goog search
+responsive web design free
+
+
+//// API gateway to anything
+theres many gateway that we can use but for now,
+we dont ahve anything
+
+
+
+////file manipulation
+about uploading to server and downloading from server
+
+
+
+////generating javascript documentation
+we might need to do this for easier explanation
+https://stackoverflow.com/questions/5841490/generating-javascript-documentation
+
+
+
+////sending email 
+on front-end side
+make html and css form to send details 
+directly to an email 
+when submit button is pressed
+https://www.w3schools.com/tags/tag_address.asp
+
+
+
+////with heroku
+Some content it will involved with heroku because, heroku kinda simple too learn 
+
+
+
+////security
+//goog search
+web application security scanner
+https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html
+https://owasp.org/www-community/Vulnerability_Scanning_Tools
+
+//things to watch out
+innerText are better than innerHTML
+because innerHTML can be injected
+
+
+

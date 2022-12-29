@@ -1,0 +1,10 @@
+
+
+//anything you can learn on ejs
+https://www.youtube.com/playlist?list=PL7sCSgsRZ-slYARh3YJIqPGZqtGVqZRGt
+https://www.youtube.com/watch?v=lYVKbAn5Od0
+
+//difference about ejs-layout && ejs
+first hand we just only do hubba-hubba all are layouts...
+now we need ejs-layout
+https://raddy.co.uk/blog/nodejs-express-layouts-and-partials/

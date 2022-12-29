@@ -1,0 +1,11 @@
+
+
+
+changing gsdam to just only static things 4 setuping content (DONE)
+if we already create utility why we need to assign it more on utility folder?(DONE)
+
+we just only cover on changeable content?
+
+//dumper
+
+

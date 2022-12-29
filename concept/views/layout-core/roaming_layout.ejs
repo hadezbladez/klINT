@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <% include ../layout-part/roaming/headstyle %> </head>
+<body>
+	<div id="global-loader" ></div>
+	<div class="page">
+		<div class="page-main">
+			<% include ../layout-part/roaming/header %> 
+			<div class="wrapper">
+				<% include ../layout-part/roaming/sidebar %>
+				<div class=" content-area"><%- body %></div>
+			</div>
+		</div>
+
+		<% include ../layout-part/roaming/footer %>
+        <% include ../layout-part/roaming/script %>
+        <%- script %>
+	</div>
+</body>

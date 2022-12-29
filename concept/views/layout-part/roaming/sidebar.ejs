@@ -1,0 +1,73 @@
+<!-- Sidebar Holder -->
+<nav id="sidebar" class="nav-sidebar">
+    <ul class="list-unstyled components" id="accordion">
+        <li><a id="dashboard-content-tab" href="/dashboards" class=" wave-effect">
+            <div class="row">
+                <div class="col-md-2"><i class="fas fa-house-damage mr-2"></i></div>
+                <div class="col-md-10">Dashboard</div>
+            </div>
+        </a> </li>
+
+        <li class="cdg-admo-reban">
+            <a href="#CmsOption" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+                <div class="row">
+                    <div class="col-md-2"><i class="fas fa-chalkboard-teacher mr-3"></i></div>
+                    <div class="col-md-10">Content Manage System</div>
+                </div>
+            </a>
+            <ul class="collapse list-unstyled" id="CmsOption" data-parent="#accordion">
+                <li><a href="/content-management-system/main">User Settings</a></li>
+                <li><a href="/content-management-system/compose/network-profile">1. Compose Network profile</a></li>
+            </ul>
+        </li>
+
+		<li>
+            <!-- <a id="mastap-content-tab" href="/master-tapcode" class=" wave-effect">
+                <div class="row">
+                    <div class="col-md-2"><i class="fa fa-users mr-2"></i></div>
+                    <div class="col-md-10">Data Reference</div>
+                </div>
+            </a> -->
+            <a href="#DataRef" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+                <div class="row">
+                    <div class="col-md-2"><i class="fas fa-users mr-2"></i></div>
+                    <div class="col-md-10">Content Data Reference</div>
+                </div>
+                
+            </a>
+            <ul class="collapse list-unstyled" id="DataRef" data-parent="#accordion">
+                <li><a href="/master-tapcode">Data Reference</a></li>
+                <li><a href="/mastersearch">Search Master Data</a></li>
+            </ul>
+
+
+
+        </li>
+
+        <li> <a id="provisiong-content-tab" href="/provisioning" class="wave-effect">
+                <div class="row">
+                    <div class="col-md-2"><i class="fa fa-file-code ml-1 mr-2"></i></div>
+                    <div class="col-md-10">Provisioning</div>
+                </div>
+        </a> </li>
+      
+        <!-- still not determined -->
+        <li class="cdg-suo-reban">
+            <!-- i dont think we need that paranoid more because we have a need to hide this -->
+            <a href="#OptionSetting" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+                <div class="row">
+                    <div class="col-md-2"><i class="fa fa-wrench mr-3"></i></div>
+                    <div class="col-md-10">Options / Setting</div>
+                </div>
+                
+            </a>
+            <ul class="collapse list-unstyled" id="OptionSetting" data-parent="#accordion">
+                <li><a href="/option/settingNe" class="ccss-ddee">Setting NE</a></li>
+                <li><a href="/option/execution" class="">Setting schedule for execution time</a></li>
+            </ul>
+        </li>
+
+
+    </ul>
+</nav>
+<!-- /Sidebar Holder -->

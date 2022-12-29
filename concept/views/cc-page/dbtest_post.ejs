@@ -1,0 +1,30 @@
+
+
+<h1>
+    Database test Post
+</h1>
+<textarea id="cdg-test" readonly cols="70" rows="20"></textarea>
+
+
+<script src="/vendor/roaming/js/jquery-3.2.1.min.js"></script>
+<script>
+
+    function ajaxPost(url,data = {content : null, token : null},callback = function(){} ) {
+        $.ajax({
+            url:url, type:"POST", dataType:"json",
+
+            data: data.content,
+            headers: {"token": data.token},
+
+            success:(R)=>{callback(R); },
+            error:(err)=>{console.log(err) }
+        });
+    }
+
+    console.log("start test post")
+    ajaxPost("/testerPost", {token : null, content : {a : "db_test"} }, function(R){
+        console.log(R)
+        $('#cdg-test').html(JSON.stringify(R, null, 4) )
+    })
+
+</script>

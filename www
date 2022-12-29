@@ -1,0 +1,255 @@
+#!/usr/bin/env node
+
+
+let vvart = {//variant variable translation
+    data :{server : null, port : null,       app : null, ssl_content:undefined, tlog : __filename.replace(__dirname, "")},
+    changeable_content : {//do change in here not other place
+        modelDatabase : 'mysql',//'mysql' || 'pgsql' || false
+        useCertificate : false,
+        cmdlog : false,
+
+        appObj_session : {
+            key: 'user_sid', secret: '1the2quick3brown4fox5jumps6over7lazy8dog9', 
+            resave: true, saveUninitialized: true, rolling: true, 
+            cookie: {expires: 24 * 3600 * 1000}//gsdam.func._ttime.in_hour(24)
+        },
+        defaultContent : {port : "3000"},
+
+        //function
+        initSetup : {
+            //app
+            cfgAppFirst_errorPage404 : function(req, res, next) {
+                const createError = require('http-errors'); 
+                next(createError(404));
+            },
+            cfgAppFirst_errorPage : function(err, req, res, next) {
+                let errFix = (req.app.get('env') === 'development') ? err : {}
+                res.locals = {message : err.message,error : errFix}
+                res.status(err.status || 500); 
+                res.render('error/err_pgdev');
+            },
+            cfgAppFirst_sessioning : function(req, res, next){
+                let check_userContent = req.cookies.user_sid && !req.session.user
+                if (check_userContent) {res.clearCookie('user_sid');}
+                next();
+            },
+            appCore_initialize : function(cf_core, useModel){
+                // cf_core.example_use_cors();
+                cf_core.use_renderEngine(true);
+                cf_core.setup_packageDebug();
+                cf_core.setup_sessionAndRoute(useModel);
+                cf_core.setup_errorHandler();
+            },
+            //server
+            serverTestListening : function(error){
+                //{error} not used?
+                let addr = vvart.data.server.address(), bind; 
+        
+                if(typeof addr === 'string'){bind = `pipe ${addr}`}
+                else{bind = `port ${addr.port}`}
+                
+                require('debug')('app:server') ('Listening on ' + bind);
+            },
+        },
+
+
+    },
+}
+let coreContent = {
+    initialize_globalSetup : function(){
+        let gsdamSetup = require(`${__dirname}/app/GSDAM`)
+        gsdamSetup.ALLINIT();
+        gsdamSetup.GSDAM.getInstance().setup1_currentProjectPath(__dirname)
+        gsdamSetup.GSDAM.getInstance().setup2_dotenvConfig();
+        gsdamSetup.GSDAM.getInstance().setup3_initialize_powerful_ppFolder();
+        // gsdamSetup.GSDAM.getInstance().setup4_add2Func();
+        // gsdamSetup.GSDAM.getInstance().setup4a_add2utilib();
+        gsdamSetup.GSDAM.getInstance().setup4b_loadPacklib()
+
+        global.GSDAM = gsdamSetup.GSDAM.getInstance();
+
+        vvart.data.port = global.GSDAM.func.valPort_point(process.env.PORT || vvart.changeable_content.defaultContent.port)
+        if(vvart.changeable_content.modelDatabase){
+            // global.GSDAM.install1_databaseConnection(vvart.changeable_content.modelDatabase);
+            // global.GSDAM.install1a_databaseConnection(vvart.changeable_content.modelDatabase);
+            global.GSDAM.install1b_databaseConnection(vvart.changeable_content.modelDatabase);
+        }
+    },
+    createApp_asInitializedCondition : function(){
+        const express = require('express'); //const path = require('path');
+        const cookieParser = require('cookie-parser'); const session = require('express-session'); const logger = require('morgan');
+        const expressLayouts = require('express-ejs-layouts');          const cors = require('cors');
+
+        const gsdam = global.GSDAM; //using global.GSDAM
+        const appCC = express();
+
+        let vvartchgis_sc = vvart.changeable_content.initSetup;//<<shortcut
+        let cf_core = {
+            example_use_cors : function(){appCC.use(  cors({origin: "http://localhost:8081" })  ); },//still an example
+            use_renderEngine : function(useLayout_content){
+                /*
+                // renderPage
+                https://stackoverflow.com/questions/17911228/how-do-i-use-html-as-the-view-engine-in-express
+
+                // about express-ejs-layout
+                https://www.npmjs.com/package/express-ejs-layouts
+                
+                */
+                if(useLayout_content){
+                    appCC.use(expressLayouts)
+                    appCC.set('layout', "./layout-core/default_layout")
+                    appCC.set("layout extractScripts", true)
+                }
+                appCC.set('views', gsdam.func.powerful_ppFolder.front_webpage); //ppFolder(pfc.front_webpage)
+                appCC.set('view engine', 'ejs');
+                appCC.use(express.static(gsdam.func.powerful_ppFolder.front_public ));//ppFolder(pfc.front_public)
+            },
+            setup_packageDebug : function(){
+                const multer = require('multer');
+                const upload = multer();
+
+                appCC.use(express.json() );
+                appCC.use(express.urlencoded({ extended: true })  );//changing
+
+                appCC.use(upload.array()); 
+
+                appCC.use(logger('dev') ); 
+                appCC.use(cookieParser() ); 
+            },
+            setup_sessionAndRoute : function(useModel = true){//starting landing-page @ "/"
+                let rw = require(gsdam.func.powerful_ppFolder.webRoute);
+                rw.init(express, useModel)
+
+                appCC.use(session(vvart.changeable_content.appObj_session));
+                appCC.use(function(req, res, next){vvartchgis_sc.cfgAppFirst_sessioning(req, res, next) } );
+                appCC.use('/', rw.getRouter() );//rootRequire(pfc.webRoute)
+            },
+            setup_errorHandler : function(){
+                appCC.use((req, res, next)=>{vvartchgis_sc.cfgAppFirst_errorPage404(req, res, next)} );
+                appCC.use((err, req, res, next)=>{vvartchgis_sc.cfgAppFirst_errorPage(err, req, res, next)} );
+            }
+        }
+
+        let _app = {
+            inited : false,
+            setupInitialize_appInstances : function(useModel){
+                if(_app.inited){return;};   _app.inited = true;
+                vvart.changeable_content.initSetup.appCore_initialize(cf_core, useModel)
+            },
+            get_appInstances : function(){if(!_app.inited){return null;}  return appCC;}
+        };
+
+        let useModel = false;
+        for(let vr of global.GSDAM.getSetupList() ){if(vr == "databaseConnection"){useModel = true}}
+        _app.setupInitialize_appInstances(useModel);
+        vvart.data.app = _app.get_appInstances()
+
+    },
+    checkAndGet_keyCert_forHTTPS : function(){
+        if(!!!(vvart.changeable_content.useCertificate) ){return;}
+        const fs = require('fs')
+        try{//working usage
+            let key_ssl = fs.readFileSync(`${__dirname}/security/ctf1/cert.key`)
+            let pem_ssl = fs.readFileSync(`${__dirname}/security/ctf1/cert.pem`)
+            if(key_ssl && pem_ssl){vvart.data["ssl_content"] = {key : key_ssl, cert : pem_ssl,}  }
+            else{throw new error("key and certificate is not valid || not initialized")}
+        }catch(err){console.log(err)}
+    },
+    createServer_basedOnSetupApp : function(){
+        vvart.data.app.set('port',vvart.data.port); // vvart.data.app.disable('etag');
+
+        if(vvart.data.ssl_content){
+            const https = require('https');
+            vvart.data.app.use((req, res, next)=>{
+                if (req.header('x-forwarded-proto') !== 'https') {res.redirect(`https://${req.header('host')}${req.url}`);}
+                else {next();}
+            })
+            vvart.data.server = https.createServer(vvart.data.ssl_content,vvart.data.app)
+        }else{
+            const http = require('http');
+            vvart.data.server = http.createServer(vvart.data.app)
+        }
+        vvart.data.server.on("error", (error)=>vvart.changeable_content.initSetup.serverTestListening(error) )
+        vvart.data.server.on("listening", ()=>vvart.changeable_content.initSetup.serverTestListening() )
+    },
+    cmdProcess_check : function(){
+        if(!!!(vvart.changeable_content.cmdlog) ){return;}
+        //Note that Windows does not support sending Signals
+        //heroku dont like this || will give an error
+        let tlogp = `${vvart.data.tlog}.coreContent.cmdProcess_check()`
+        process.on("SIGTERM", function(){console.log(`${tlogp}{SIGTERM} procTermed`) })
+        process.on("SIGKILL", function(){console.log(`${tlogp}{SIGKILL} procKOed`) })
+        process.on('exit', function(){console.log(`${tlogp}{exit} `) })
+    },
+    start_appServer : function(){
+        vvart.data.server.listen(vvart.data.port); 
+        console.log(`${vvart.data.tlog}.coreContent.start_appServer() starting on port ${vvart.data.port}`);
+    },
+}
+
+
+////----Starting tree
+const vr = (async function(){
+    console.log(vvart.data.tlog, ">> App Starting..")
+    
+    coreContent.initialize_globalSetup();
+    coreContent.createApp_asInitializedCondition();
+    coreContent.checkAndGet_keyCert_forHTTPS();
+    coreContent.createServer_basedOnSetupApp();
+    coreContent.cmdProcess_check();
+    coreContent.start_appServer();
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let deprecated = {
+    //unused
+    createSetupApp_asInitialized_old : function(){
+        let _app = require(global.GSDAM._func.powerful_ppFolder.appSetup);
+        _app.setupInitialize_appInstances();
+        appvars.app = _app.get_appInstances()
+    },
+    delete_globalAfter : function(){
+        delete global.ppFolder;
+        delete global.rootRequire;
+    },
+}

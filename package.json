@@ -1,0 +1,30 @@
+{
+  "name": "ex3anjs_fixdynamicserver",
+  "version": "1.0.0",
+  "description": "project skeleton",
+  "main": "www",
+  "scripts": {
+    "start": "nodemon",
+    "test": "jest"
+  },
+  "author": "hsn",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.1",
+    "http": "0.0.1-security",
+    "http-errors": "^1.8.0",
+    "jest": "^27.3.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7",
+    "postgres": "^1.0.2"
+  }
+}
